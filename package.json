@@ -1,15 +1,16 @@
 {
   "name": "ip-address-tracker-master",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html --out-dir=build"
+    "buil": "parcel build index.html --dist-dir build",
+    "predeploy": "npm run buil",
+    "deploy": "vercel --prod"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "parcel": "^2.7.0",
+    "vercel": "^28.2.0"
   }
 }
